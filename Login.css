@@ -136,7 +136,20 @@
   border-width: ;
   border-color: rgb(255, 255, 255);
   }
-  
 
-  
-  
+  .type {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #150303;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #000;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.type:hover,
+.type:focus-within {
+  border-color: #00ffff;
+  box-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 4px #00ffff;
+}

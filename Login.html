@@ -46,26 +46,28 @@
 </head>
 
 <body class="login-body">
-    <div id="particles-js"></div>
-    <div class="main_box">
+  <div id="particles-js"></div>
+  <div class="main_box">
     <div class="picture">
-        <img src="../Resources/logo.png"" alt="Logo" />
+      <img src="../../Resources/logo.png" alt="Acadlyst Logo" />
     </div>
-  <div class="login-box">
-    <h2>Login</h2>
-    <form onsubmit="return validateLogin()">
-      <select id="role">
-        <option value="student">Student</option>
-        <option value="faculty">Faculty</option>
-      </select>
 
-      <input type="text" id="username" placeholder="Username" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-      <p id="error-msg" class="error"></p>
-    </form>
+    <div class="login-box">
+      <h2>Login</h2>
+      <form onsubmit="return validateLogin(event)">
+        <select class="type" id="role">
+          <option value="student">Student</option>
+          <option value="faculty">Faculty</option>
+        </select>
+
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p id="error-msg" class="error"></p>
+      </form>
+    </div>
   </div>
-  </div>
+
 <script src="script.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
