@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+    background: #f5f7fa;
+  }
+  
+  h1 {
+    color: #2a5298;
+  }
+  
+  .nav-links a {
+    display: block;
+    margin: 10px auto;
+    text-decoration: none;
+    color: #fff;
+    background: #2a5298;
+    padding: 10px 20px;
+    width: 200px;
+    border-radius: 10px;
+  }
+  
+  table {
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
