@@ -1,0 +1,135 @@
+/* Custom styles for Acadlyst */
+
+/* Primary color overrides */
+:root {
+    --bs-primary: #4f46e5;
+    --bs-primary-rgb: 79, 70, 229;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-primary {
+    background: linear-gradient(to bottom, var(--bs-primary), #4338ca);
+}
+
+/* Custom shadows */
+.shadow-soft {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom spacing */
+.min-vh-90 {
+    min-height: 90vh;
+}
+
+/* Custom transitions */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+/* Custom button styles */
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom card styles */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom icon styles */
+.icon-wrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Custom navbar styles */
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Custom section spacing */
+section {
+    padding: 5rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 0;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Custom footer styles */
+footer {
+    background-color: #1a1a1a;
+}
+
+footer a:hover {
+    color: var(--bs-primary) !important;
+}
+
+/* Custom form styles */
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.25);
+}
+
+/* Custom list styles */
+.list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+/* Custom image styles */
+.img-hover {
+    transition: all 0.3s ease;
+}
+
+.img-hover:hover {
+    transform: scale(1.02);
+}
+
+/* Custom text styles */
+.text-gradient {
+    background: linear-gradient(to right, var(--bs-primary), #4338ca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Custom animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+} 
