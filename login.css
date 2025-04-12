@@ -1,0 +1,83 @@
+/* Login Page Styles */
+.login-container {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.login-phone-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.login-form-container {
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 1px;
+}
+
+.login-logo {
+    max-width: 175px;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    background-color: #fafafa;
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.divider-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.divider-text {
+    margin: 0 10px;
+    color: #8e8e8e;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.login-with-facebook {
+    color: #385185;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.facebook-icon {
+    color: #385185;
+}
+
+.facebook-icon-white {
+    color: white;
+}
+
+.signup-box {
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 1px;
+}
+
+.app-download {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.app-download p {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .login-phone-image {
+        display: none;
+    }
+}
