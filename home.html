@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acadlyst - Transform Your Learning Experience</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="home.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="student/logo.png" alt="Acadlyst Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features" data-section="features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#demo" data-section="demo">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials" data-section="testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="/api/auth/signup">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-banner">
+        <div class="hero-image-container">
+            <img src="student/hero-bg.jpg" class="hero-image w-100" alt="Modern University Building">
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content position-absolute top-50 start-0 w-100 translate-middle-y">
+            <div class="container">
+                <div class="hero-text text-white">
+                    <h1 class="animate-on-scroll">Catalyst to your Academics</h1>
+                    <h2 class="animate-on-scroll">Transform Your Learning Experience with Acadlyst</h2>
+                    <p class="animate-on-scroll">A comprehensive learning management system designed for universities, colleges, and educational institutions.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start animate-on-scroll">
+                        <a href="student/signup.html" class="btn btn-light btn-lg px-4 me-md-2">Join Today</a>
+                        <a href="#features" class="btn btn-outline-light btn-lg px-4">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    .hero-banner {
+        height: 100vh;
+        min-height: 400px;
+        max-height: 600px;
+        overflow: hidden;
+    }
+
+    .hero-image-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0, 0.3) 100%
+        );
+    }
+
+    .hero-content {
+        z-index: 10;
+    }
+    </style>
+
+    <!-- Features Section -->
+    <section class="py-5" id="features">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Why Choose <span class="gradient-text">Acadlyst</span>?</h2>
+                <p class="lead">Our platform offers powerful tools to enhance teaching and learning.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mx-auto mb-4">
+                                <i class="fas fa-chalkboard-teacher fa-3x text-primary"></i>
+                            </div>
+                            <h3 class="h4 card-title">Unified Platform</h3>
+                            <p class="card-text">One platform for both students and teachers with personalized dashboards and experiences.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mx-auto mb-4">
+                                <i class="fas fa-laptop-code fa-3x text-primary"></i>
+                            </div>
+                            <h3 class="h4 card-title">Interactive Learning</h3>
+                            <p class="card-text">Engage students with interactive content, assignments, quizzes, and multimedia resources.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mx-auto mb-4">
+                                <i class="fas fa-chart-line fa-3x text-primary"></i>
+                            </div>
+                            <h3 class="h4 card-title">Progress Tracking</h3>
+                            <p class="card-text">Monitor student progress with detailed analytics and personalized performance insights.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Demo -->
+    <section class="py-5 bg-light" id="demo">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll">
+                    <h2 class="display-6 fw-bold mb-3">Designed for Modern Education</h2>
+                    <p class="mb-4">Acadlyst provides a seamless experience for both educators and students. Our intuitive interface makes it easy to create courses, manage assignments, and track progress.</p>
+                    
+                    <div class="mb-4">
+                        <h5><i class="fas fa-check-circle text-success me-2"></i> Intuitive Course Management</h5>
+                        <p class="text-muted">Create and organize courses with ease, upload materials, and manage student enrollments.</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5><i class="fas fa-check-circle text-success me-2"></i> Comprehensive Assignment Tools</h5>
+                        <p class="text-muted">Create, distribute, and grade assignments with detailed feedback options.</p>
+                    </div>
+                    
+                    <div>
+                        <h5><i class="fas fa-check-circle text-success me-2"></i> Real-time Analytics</h5>
+                        <p class="text-muted">Track student engagement and performance with comprehensive analytics dashboards.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 animate-on-scroll">
+                    <div class="card border-0 shadow">
+                        <img src="/images/platform-demo.jpg" class="card-img-top" alt="Acadlyst platform demonstration">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Experience Acadlyst in Action</h5>
+                            <p class="card-text">Our intuitive interface designed for both teachers and students.</p>
+                            <a href="./student/signup.html" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5" id="testimonials">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">What Our Community Says</h2>
+                <p class="lead">Join the growing community of educators and students transforming education</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="student/testimonial-1.svg" class="rounded-circle me-3" width="60" height="60" alt="Dr. James Wilson">
+                                <div>
+                                    <h5 class="mb-0">Dr. James Wilson</h5>
+                                    <p class="text-muted mb-0">Department Head, Computer Science</p>
+                                </div>
+                            </div>
+                            <p class="mb-0">"Acadlyst has revolutionized how we manage our computer science curriculum. The platform's ability to handle code submissions and provide instant feedback has made teaching programming courses much more efficient."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="student/testimonial-2.svg" class="rounded-circle me-3" width="60" height="60" alt="Prof. Maria Rodriguez">
+                                <div>
+                                    <h5 class="mb-0">Prof. Maria Rodriguez</h5>
+                                    <p class="text-muted mb-0">Engineering Faculty</p>
+                                </div>
+                            </div>
+                            <p class="mb-0">"The analytics dashboard helps me identify struggling students early in the semester. I can now provide targeted support before it's too late. The improvement in student performance has been remarkable."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="student/testimonial-3.svg" class="rounded-circle me-3" width="60" height="60" alt="Alex Chen">
+                                <div>
+                                    <h5 class="mb-0">Alex Chen</h5>
+                                    <p class="text-muted mb-0">Graduate Student</p>
+                                </div>
+                            </div>
+                            <p class="mb-0">"As a teaching assistant, Acadlyst makes it easy to manage multiple lab sections and grade assignments. The automated grading features save hours of time, letting me focus on helping students understand complex concepts."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center animate-on-scroll">
+            <h2 class="display-5 fw-bold mb-4">Ready to Transform Your Educational Experience?</h2>
+            <p class="lead mb-5">Join thousands of educators and students who are already using Acadlyst.</p>
+            <a href="student/signup.html" class="btn btn-light btn-lg px-5 py-3 fw-semibold">Join Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>About Acadlyst</h5>
+                    <p>A modern learning management system designed to enhance the educational experience for both teachers and students.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#features" class="text-white">Features</a></li>
+                        <li><a href="#demo" class="text-white">Demo</a></li>
+                        <li><a href="#testimonials" class="text-white">Testimonials</a></li>
+                        <li><a href="/SRC/Html/Login.html" class="text-white">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> support@acadlyst.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Education St, Learning City</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Acadlyst. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="3RBIeGj5xyNscg6WqDpnz";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to fetch and display section data
+        async function loadSectionData(section) {
+            try {
+                const response = await fetch(`/api/home/${section}`);
+                const data = await response.json();
+                
+                if (section === 'features') {
+                    updateFeatures(data.features);
+                } else if (section === 'testimonials') {
+                    updateTestimonials(data.testimonials);
+                } else if (section === 'demo') {
+                    updateDemo(data.demo);
+                }
+            } catch (error) {
+                console.error('Error loading section data:', error);
+            }
+        }
+
+        // Function to update features section
+        function updateFeatures(features) {
+            const featuresContainer = document.querySelector('#features .row');
+            featuresContainer.innerHTML = features.map(feature => `
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mx-auto mb-4">
+                                <i class="fas ${feature.icon} fa-3x text-primary"></i>
+                            </div>
+                            <h3 class="h4 card-title">${feature.title}</h3>
+                            <p class="card-text">${feature.description}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Function to update testimonials section
+        function updateTestimonials(testimonials) {
+            const testimonialsContainer = document.querySelector('#testimonials .row');
+            testimonialsContainer.innerHTML = testimonials.map(testimonial => `
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="student/${testimonial.image}" class="rounded-circle me-3" width="60" height="60" alt="${testimonial.name}">
+                                <div>
+                                    <h5 class="mb-0">${testimonial.name}</h5>
+                                    <p class="text-muted mb-0">${testimonial.role}</p>
+                                </div>
+                            </div>
+                            <p class="mb-0">"${testimonial.text}"</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Function to update demo section
+        function updateDemo(demo) {
+            const demoContainer = document.querySelector('#demo');
+            demoContainer.innerHTML = `
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll">
+                            <h2 class="display-6 fw-bold mb-3">${demo.title}</h2>
+                            <p class="mb-4">${demo.description}</p>
+                            <ul class="list-unstyled">
+                                ${demo.features.map(feature => `
+                                    <li class="mb-4">
+                                        <h5><i class="fas fa-check-circle text-success me-2"></i> ${feature}</h5>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 animate-on-scroll">
+                            <div class="card border-0 shadow">
+                                <img src="student/university-students.svg" class="card-img-top" alt="Acadlyst platform demonstration">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Experience Acadlyst in Action</h5>
+                                    <p class="card-text">Our intuitive interface designed for both teachers and students.</p>
+                                    <a href="/api/auth/signup" class="btn btn-primary">Get Started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Observe all animate-on-scroll elements
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // Load initial data
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSectionData('features');
+            loadSectionData('testimonials');
+            loadSectionData('demo');
+        });
+    </script>
+</body>
+</html>

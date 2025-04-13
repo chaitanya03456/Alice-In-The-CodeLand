@@ -1,0 +1,292 @@
+<!-- Student Dashboard -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 col-lg-2 d-md-block bg-light sidebar py-3">
+            <div class="position-sticky">
+                <div class="d-flex align-items-center mb-4 px-3">
+                    <img src="/images/student-avatar.jpg" alt="Student Avatar" class="rounded-circle me-2" width="40" height="40">
+                    <div>
+                        <h6 class="mb-0">Alex Johnson</h6>
+                        <small class="text-muted">Computer Science Major</small>
+                    </div>
+                </div>
+                <hr>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/student/dashboard">
+                            <i class="fas fa-tachometer-alt me-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/student/courses">
+                            <i class="fas fa-book me-2"></i>
+                            My Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/student/assignments">
+                            <i class="fas fa-clipboard-list me-2"></i>
+                            Assignments
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/student/grades">
+                            <i class="fas fa-chart-line me-2"></i>
+                            Grades
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/student/calendar">
+                            <i class="fas fa-calendar-alt me-2"></i>
+                            Calendar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/student/messages">
+                            <i class="fas fa-envelope me-2"></i>
+                            Messages
+                            <span class="badge bg-danger rounded-pill ms-2">2</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/student/settings">
+                            <i class="fas fa-cog me-2"></i>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+                <div class="px-3">
+                    <a href="/logout" class="btn btn-outline-danger w-100">
+                        <i class="fas fa-sign-out-alt me-2"></i>
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="col-md-9 col-lg-10 ms-sm-auto px-md-4 py-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-4 border-bottom">
+                <h1 class="h2">Dashboard</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="btn-group me-2">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Calendar</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Reports</button>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-primary">
+                        <i class="fas fa-search me-1"></i>
+                        Browse Courses
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Stats Cards -->
+            <div class="row dashboard-stats">
+                <div class="col-md-3 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-icon text-primary">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stat-value text-primary">4</div>
+                        <div class="stat-label">Enrolled Courses</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-icon text-success">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div class="stat-value text-success">12</div>
+                        <div class="stat-label">Completed Assignments</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-icon text-warning">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="stat-value text-warning">5</div>
+                        <div class="stat-label">Pending Assignments</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-icon text-info">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-value text-info">87%</div>
+                        <div class="stat-label">Overall GPA</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Course Progress -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Course Progress</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item px-0 py-3">
+                                    <div class="d-flex w-100 justify-content-between mb-1">
+                                        <h6 class="mb-0">CS 101: Introduction to Programming</h6>
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="progress-indicator">
+                                        <div class="progress-bar" style="width: 75%"></div>
+                                    </div>
+                                    <small class="text-muted">Dr. Michael Thompson</small>
+                                </div>
+                                <div class="list-group-item px-0 py-3">
+                                    <div class="d-flex w-100 justify-content-between mb-1">
+                                        <h6 class="mb-0">CS 202: Data Structures</h6>
+                                        <span>45%</span>
+                                    </div>
+                                    <div class="progress-indicator">
+                                        <div class="progress-bar" style="width: 45%"></div>
+                                    </div>
+                                    <small class="text-muted">Dr. Sarah Williams</small>
+                                </div>
+                                <div class="list-group-item px-0 py-3">
+                                    <div class="d-flex w-100 justify-content-between mb-1">
+                                        <h6 class="mb-0">MATH 301: Calculus II</h6>
+                                        <span>60%</span>
+                                    </div>
+                                    <div class="progress-indicator">
+                                        <div class="progress-bar" style="width: 60%"></div>
+                                    </div>
+                                    <small class="text-muted">Dr. Robert Chen</small>
+                                </div>
+                                <div class="list-group-item px-0 py-3">
+                                    <div class="d-flex w-100 justify-content-between mb-1">
+                                        <h6 class="mb-0">ENG 201: Technical Writing</h6>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="progress-indicator">
+                                        <div class="progress-bar" style="width: 90%"></div>
+                                    </div>
+                                    <small class="text-muted">Prof. Emily Carter</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Upcoming Assignments and Calendar -->
+            <div class="row">
+                <!-- Upcoming Assignments -->
+                <div class="col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Upcoming Assignments</h5>
+                            <a href="/student/assignments" class="btn btn-sm btn-link">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-1">Final Project</h6>
+                                        <p class="text-muted mb-0 small">CS 101: Introduction to Programming</p>
+                                    </div>
+                                    <div class="text-danger">
+                                        <span class="badge bg-danger-subtle text-danger">Due Tomorrow</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-1">Lab Exercise 8</h6>
+                                        <p class="text-muted mb-0 small">CS 202: Data Structures</p>
+                                    </div>
+                                    <div>
+                                        <span class="badge bg-warning-subtle text-warning">Due in 3 Days</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-1">Research Paper Draft</h6>
+                                        <p class="text-muted mb-0 small">ENG 201: Technical Writing</p>
+                                    </div>
+                                    <div>
+                                        <span class="badge bg-info-subtle text-info">Due Next Week</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-1">Problem Set 5</h6>
+                                        <p class="text-muted mb-0 small">MATH 301: Calculus II</p>
+                                    </div>
+                                    <div>
+                                        <span class="badge bg-secondary-subtle text-secondary">Due in 10 Days</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div class="col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title mb-0">Recent Activity</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item px-0 py-3 d-flex align-items-center">
+                                    <div class="me-3">
+                                        <span class="avatar bg-success text-white rounded p-2">
+                                            <i class="fas fa-clipboard-check"></i>
+                                        </span>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <p class="mb-0">Quiz 3 graded in <a href="#" class="fw-semibold">CS 101</a> - You scored 92%</p>
+                                        <small class="text-muted">Today, 10:45 AM</small>
+                                    </div>
+                                </div>
+                                <div class="list-group-item px-0 py-3 d-flex align-items-center">
+                                    <div class="me-3">
+                                        <span class="avatar bg-primary text-white rounded p-2">
+                                            <i class="fas fa-book"></i>
+                                        </span>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <p class="mb-0">New module released in <a href="#" class="fw-semibold">CS 202: Data Structures</a></p>
+                                        <small class="text-muted">Yesterday</small>
+                                    </div>
+                                </div>
+                                <div class="list-group-item px-0 py-3 d-flex align-items-center">
+                                    <div class="me-3">
+                                        <span class="avatar bg-info text-white rounded p-2">
+                                            <i class="fas fa-comment"></i>
+                                        </span>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <p class="mb-0">Dr. Thompson replied to your question in <a href="#" class="fw-semibold">CS 101</a></p>
+                                        <small class="text-muted">2 days ago</small>
+                                    </div>
+                                </div>
+                                <div class="list-group-item px-0 py-3 d-flex align-items-center">
+                                    <div class="me-3">
+                                        <span class="avatar bg-warning text-white rounded p-2">
+                                            <i class="fas fa-clipboard-list"></i>
+                                        </span>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <p class="mb-0">New assignment posted in <a href="#" class="fw-semibold">MATH 301: Calculus II</a></p>
+                                        <small class="text-muted">3 days ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

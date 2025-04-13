@@ -1,0 +1,76 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a5cbd" stop-opacity="1" />
+      <stop offset="100%" stop-color="#2a4598" stop-opacity="1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff7e5f" stop-opacity="1" />
+      <stop offset="100%" stop-color="#feb47b" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#grad1)"/>
+  
+  <!-- University building silhouette -->
+  <path d="M300,700 L300,400 L400,350 L500,400 L500,700 Z" fill="#1a2f6a"/>
+  <path d="M550,700 L550,450 L650,400 L750,450 L750,700 Z" fill="#1a2f6a"/>
+  <path d="M800,700 L800,350 L950,280 L1100,350 L1100,700 Z" fill="#1a2f6a"/>
+  <path d="M1150,700 L1150,420 L1250,370 L1350,420 L1350,700 Z" fill="#1a2f6a"/>
+  <path d="M1400,700 L1400,450 L1500,400 L1600,450 L1600,700 Z" fill="#1a2f6a"/>
+  
+  <!-- Main dome -->
+  <path d="M950,280 C950,200 950,200 950,200 L950,150 C950,150 850,50 950,50 C1050,50 950,150 950,150 L950,200 C950,200 950,200 950,280 Z" fill="#1a2f6a"/>
+  
+  <!-- Steps -->
+  <rect x="300" y="700" width="1300" height="20" fill="#152553"/>
+  <rect x="350" y="720" width="1200" height="20" fill="#152553"/>
+  <rect x="400" y="740" width="1100" height="20" fill="#152553"/>
+  
+  <!-- Students (simplified silhouettes) -->
+  <circle cx="500" cy="650" r="30" fill="#152553"/>
+  <rect x="485" y="680" width="30" height="60" fill="#152553"/>
+  
+  <circle cx="600" cy="630" r="30" fill="#152553"/>
+  <rect x="585" y="660" width="30" height="60" fill="#152553"/>
+  
+  <circle cx="750" cy="650" r="30" fill="#152553"/>
+  <rect x="735" y="680" width="30" height="60" fill="#152553"/>
+  
+  <circle cx="900" cy="630" r="30" fill="#152553"/>
+  <rect x="885" y="660" width="30" height="60" fill="#152553"/>
+  
+  <circle cx="1050" cy="650" r="30" fill="#152553"/>
+  <rect x="1035" y="680" width="30" height="60" fill="#152553"/>
+  
+  <circle cx="1200" cy="630" r="30" fill="#152553"/>
+  <rect x="1185" y="660" width="30" height="60" fill="#152553"/>
+  
+  <circle cx="1350" cy="650" r="30" fill="#152553"/>
+  <rect x="1335" y="680" width="30" height="60" fill="#152553"/>
+  
+  <!-- Trees -->
+  <circle cx="200" cy="650" r="50" fill="#1a573a"/>
+  <circle cx="1700" cy="650" r="50" fill="#1a573a"/>
+  <rect x="190" y="650" width="20" height="100" fill="#5d3c24"/>
+  <rect x="1690" y="650" width="20" height="100" fill="#5d3c24"/>
+  
+  <!-- Path -->
+  <path d="M400,900 C600,850 1300,850 1500,900" stroke="#334c80" stroke-width="20" fill="none"/>
+  
+  <!-- Abstract decorative elements -->
+  <circle cx="300" cy="200" r="80" fill="url(#grad2)" opacity="0.3"/>
+  <circle cx="1600" cy="300" r="120" fill="url(#grad2)" opacity="0.2"/>
+  <path d="M0,900 C300,850 600,950 900,900 C1200,850 1500,950 1920,900" stroke="white" stroke-width="2" fill="none" opacity="0.2"/>
+  <path d="M0,920 C300,870 600,970 900,920 C1200,870 1500,970 1920,920" stroke="white" stroke-width="2" fill="none" opacity="0.2"/>
+  <path d="M0,940 C300,890 600,990 900,940 C1200,890 1500,990 1920,940" stroke="white" stroke-width="2" fill="none" opacity="0.2"/>
+  
+  <!-- Stars/lights in background -->
+  <circle cx="200" cy="100" r="2" fill="white" opacity="0.8"/>
+  <circle cx="500" cy="150" r="1" fill="white" opacity="0.6"/>
+  <circle cx="800" cy="80" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="1100" cy="120" r="2" fill="white" opacity="0.8"/>
+  <circle cx="1400" cy="90" r="1" fill="white" opacity="0.6"/>
+  <circle cx="1700" cy="130" r="1.5" fill="white" opacity="0.7"/>
+</svg>

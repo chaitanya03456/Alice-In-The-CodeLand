@@ -183,6 +183,80 @@
             background-color: var(--bs-danger);
             color: white;
         }
+
+        /* Custom Button Styles */
+        .btn-custom {
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom-primary {
+            background-color: var(--bs-primary);
+            color: white;
+        }
+
+        .btn-custom-primary:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+
+        .btn-custom-outline {
+            border: 2px solid var(--bs-primary);
+            color: var(--bs-primary);
+        }
+
+        .btn-custom-outline:hover {
+            background-color: var(--bs-primary);
+            color: white;
+        }
+
+        /* Custom Card Styles */
+        .card-custom {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom Badge Styles */
+        .badge-custom {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Interactive Elements */
+        .interactive-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .interactive-card:hover {
+            background-color: rgba(79, 70, 229, 0.05);
+        }
+
+        .dropdown-custom .dropdown-menu {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+        }
+
+        .dropdown-custom .dropdown-item {
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-custom .dropdown-item:hover {
+            background-color: rgba(79, 70, 229, 0.1);
+            color: var(--bs-primary);
+        }
     </style>
 </head>
 <body>
@@ -246,7 +320,7 @@
                     </ul>
                     <hr>
                     <div class="px-3">
-                        <a href="/logout" class="btn btn-outline-danger w-100">
+                        <a href="/logout" class="btn btn-custom btn-custom-outline w-100">
                             <i class="bi bi-box-arrow-right me-2"></i>
                             Logout
                         </a>
@@ -260,16 +334,16 @@
                     <h1 class="h2 fw-bold">Dashboard</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group me-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                            <button type="button" class="btn btn-custom btn-custom-outline">
                                 <i class="bi bi-download me-1"></i>
                                 Export
                             </button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                            <button type="button" class="btn btn-custom btn-custom-outline">
                                 <i class="bi bi-printer me-1"></i>
                                 Print
                             </button>
                         </div>
-                        <button type="button" class="btn btn-sm btn-primary">
+                        <button type="button" class="btn btn-custom btn-custom-primary">
                             <i class="bi bi-plus-lg me-1"></i>
                             New Course
                         </button>
@@ -319,12 +393,12 @@
                 <!-- Recent Activity -->
                 <div class="row mb-4">
                     <div class="col-12">
-                        <div class="card activity-card">
+                        <div class="card card-custom">
                             <div class="card-header">
                                 <h5 class="card-title mb-0 fw-bold">Recent Activity</h5>
                             </div>
                             <div class="list-group list-group-flush">
-                                <div class="list-group-item d-flex align-items-center">
+                                <div class="list-group-item d-flex align-items-center interactive-card">
                                     <div class="me-3">
                                         <span class="avatar bg-primary">
                                             <i class="bi bi-people"></i>
@@ -335,7 +409,7 @@
                                         <small class="text-muted">2 hours ago</small>
                                     </div>
                                 </div>
-                                <div class="list-group-item d-flex align-items-center">
+                                <div class="list-group-item d-flex align-items-center interactive-card">
                                     <div class="me-3">
                                         <span class="avatar bg-success">
                                             <i class="bi bi-clipboard-check"></i>
@@ -346,7 +420,7 @@
                                         <small class="text-muted">Yesterday</small>
                                     </div>
                                 </div>
-                                <div class="list-group-item d-flex align-items-center">
+                                <div class="list-group-item d-flex align-items-center interactive-card">
                                     <div class="me-3">
                                         <span class="avatar bg-warning">
                                             <i class="bi bi-book"></i>
@@ -355,17 +429,6 @@
                                     <div class="flex-grow-1">
                                         <p class="mb-0">Added a new module to <a href="#" class="fw-semibold text-decoration-none">CS 202: Data Structures</a></p>
                                         <small class="text-muted">2 days ago</small>
-                                    </div>
-                                </div>
-                                <div class="list-group-item d-flex align-items-center">
-                                    <div class="me-3">
-                                        <span class="avatar bg-info">
-                                            <i class="bi bi-chat-dots"></i>
-                                        </span>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <p class="mb-0">Replied to discussion thread in <a href="#" class="fw-semibold text-decoration-none">Advanced Database Concepts</a></p>
-                                        <small class="text-muted">3 days ago</small>
                                     </div>
                                 </div>
                             </div>
@@ -377,39 +440,32 @@
                 <div class="row g-4">
                     <!-- Upcoming Deadlines -->
                     <div class="col-md-6">
-                        <div class="card deadlines-card h-100">
+                        <div class="card card-custom h-100">
                             <div class="card-header d-flex justify-content-between align-items-center">
                                 <h5 class="card-title mb-0 fw-bold">Upcoming Deadlines</h5>
-                                <a href="#" class="btn btn-sm btn-link text-decoration-none">View All</a>
+                                <a href="#" class="btn btn-custom btn-custom-outline">View All</a>
                             </div>
                             <div class="list-group list-group-flush">
-                                <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="list-group-item d-flex justify-content-between align-items-center interactive-card">
                                     <div>
                                         <h6 class="mb-1 fw-bold">Project Presentations</h6>
                                         <p class="text-muted mb-0 small">CS 101: Introduction to Programming</p>
                                     </div>
-                                    <span class="badge badge-subtle badge-danger-subtle">Tomorrow</span>
+                                    <span class="badge badge-custom bg-danger">Tomorrow</span>
                                 </div>
-                                <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="list-group-item d-flex justify-content-between align-items-center interactive-card">
                                     <div>
                                         <h6 class="mb-1 fw-bold">Final Exam</h6>
                                         <p class="text-muted mb-0 small">CS 202: Data Structures</p>
                                     </div>
-                                    <span class="badge badge-subtle badge-warning-subtle">3 Days</span>
+                                    <span class="badge badge-custom bg-warning">3 Days</span>
                                 </div>
-                                <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="list-group-item d-flex justify-content-between align-items-center interactive-card">
                                     <div>
                                         <h6 class="mb-1 fw-bold">Assignment Deadline</h6>
                                         <p class="text-muted mb-0 small">CS 303: Database Systems</p>
                                     </div>
-                                    <span class="badge badge-subtle badge-info-subtle">1 Week</span>
-                                </div>
-                                <div class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <h6 class="mb-1 fw-bold">Course Evaluation</h6>
-                                        <p class="text-muted mb-0 small">All Courses</p>
-                                    </div>
-                                    <span class="badge badge-subtle badge-secondary-subtle">2 Weeks</span>
+                                    <span class="badge badge-custom bg-info">1 Week</span>
                                 </div>
                             </div>
                         </div>
@@ -417,46 +473,37 @@
                     
                     <!-- Active Courses -->
                     <div class="col-md-6">
-                        <div class="card courses-card h-100">
+                        <div class="card card-custom h-100">
                             <div class="card-header d-flex justify-content-between align-items-center">
                                 <h5 class="card-title mb-0 fw-bold">Active Courses</h5>
-                                <a href="/teacher/courses" class="btn btn-sm btn-link text-decoration-none">View All</a>
+                                <a href="/teacher/courses" class="btn btn-custom btn-custom-outline">View All</a>
                             </div>
                             <div class="list-group list-group-flush">
-                                <a href="#" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action interactive-card">
                                     <div class="d-flex w-100 justify-content-between align-items-center">
                                         <div>
                                             <h6 class="mb-1 fw-bold">CS 101: Introduction to Programming</h6>
                                             <p class="text-muted mb-0 small">42 students enrolled</p>
                                         </div>
-                                        <span class="badge bg-primary rounded-pill">Active</span>
+                                        <span class="badge badge-custom bg-primary">Active</span>
                                     </div>
                                 </a>
-                                <a href="#" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action interactive-card">
                                     <div class="d-flex w-100 justify-content-between align-items-center">
                                         <div>
                                             <h6 class="mb-1 fw-bold">CS 202: Data Structures</h6>
                                             <p class="text-muted mb-0 small">35 students enrolled</p>
                                         </div>
-                                        <span class="badge bg-primary rounded-pill">Active</span>
+                                        <span class="badge badge-custom bg-primary">Active</span>
                                     </div>
                                 </a>
-                                <a href="#" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action interactive-card">
                                     <div class="d-flex w-100 justify-content-between align-items-center">
                                         <div>
                                             <h6 class="mb-1 fw-bold">CS 303: Database Systems</h6>
                                             <p class="text-muted mb-0 small">28 students enrolled</p>
                                         </div>
-                                        <span class="badge bg-primary rounded-pill">Active</span>
-                                    </div>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="d-flex w-100 justify-content-between align-items-center">
-                                        <div>
-                                            <h6 class="mb-1 fw-bold">CS 401: Advanced Programming</h6>
-                                            <p class="text-muted mb-0 small">22 students enrolled</p>
-                                        </div>
-                                        <span class="badge bg-secondary rounded-pill">Upcoming</span>
+                                        <span class="badge badge-custom bg-primary">Active</span>
                                     </div>
                                 </a>
                             </div>

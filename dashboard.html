@@ -15,6 +15,10 @@
             --bs-primary-rgb: 79, 70, 229;
             --bs-secondary: #6b7280;
             --bs-secondary-rgb: 107, 114, 128;
+            --bs-success: #10b981;
+            --bs-warning: #f59e0b;
+            --bs-info: #3b82f6;
+            --bs-danger: #ef4444;
         }
 
         body {
@@ -215,6 +219,87 @@
             background-color: var(--bs-primary);
             color: white;
         }
+
+        /* Custom Button Styles */
+        .btn-custom {
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom-primary {
+            background-color: var(--bs-primary);
+            color: white;
+        }
+
+        .btn-custom-primary:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+
+        /* Custom Card Styles */
+        .card-custom {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom Badge Styles */
+        .badge-custom {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Custom Progress Bar */
+        .progress-custom {
+            height: 0.5rem;
+            border-radius: 1rem;
+            background-color: #e5e7eb;
+        }
+
+        .progress-custom .progress-bar {
+            border-radius: 1rem;
+            background-color: var(--bs-primary);
+        }
+
+        /* Notification Badge */
+        .notification-badge {
+            position: relative;
+            display: inline-block;
+        }
+
+        .notification-badge .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: var(--bs-danger);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Interactive Elements */
+        .interactive-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .interactive-card:hover {
+            background-color: rgba(79, 70, 229, 0.05);
+        }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -256,12 +341,12 @@
                         <p class="mb-0 opacity-75">Welcome to your learning journey</p>
                     </div>
                     <div class="d-flex gap-3">
-                        <button class="notification-btn position-relative">
-                            <i class="bi bi-bell fs-5"></i>
-                            <span class="notification-badge">3</span>
+                        <button class="btn btn-custom btn-custom-primary notification-badge">
+                            <i class="bi bi-bell"></i>
+                            <span class="badge">3</span>
                         </button>
-                        <button class="notification-btn">
-                            <i class="bi bi-chat-dots fs-5"></i>
+                        <button class="btn btn-custom btn-custom-primary">
+                            <i class="bi bi-chat-dots"></i>
                         </button>
                     </div>
                 </div>
@@ -271,16 +356,18 @@
         <!-- Dashboard Content -->
         <div class="container">
             <!-- Welcome Section -->
-            <div class="dashboard-welcome mb-4">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <h2 class="h3 fw-bold mb-2">Welcome back, John!</h2>
-                        <p class="text-muted mb-0">You have 3 upcoming assignments this week.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="search-box ms-md-auto">
-                            <i class="bi bi-search"></i>
-                            <input type="text" class="form-control" placeholder="Search courses...">
+            <div class="card card-custom mb-4">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h2 class="h3 fw-bold mb-2">Welcome back, John!</h2>
+                            <p class="text-muted mb-0">You have 3 upcoming assignments this week.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="search-box ms-md-auto">
+                                <i class="bi bi-search"></i>
+                                <input type="text" class="form-control" placeholder="Search courses...">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -290,12 +377,12 @@
             <div class="mb-5">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h3 class="h4 fw-bold mb-0">In Progress</h3>
-                    <a href="/courses" class="text-primary text-decoration-none">View All</a>
+                    <a href="/courses" class="btn btn-custom btn-custom-outline">View All</a>
                 </div>
                 <div class="row g-4">
                     <!-- Course Card 1 -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card course-card h-100">
+                        <div class="card card-custom h-100">
                             <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" 
                                  class="card-img-top" alt="Course Image">
                             <div class="card-body">
@@ -306,18 +393,18 @@
                                         <span class="small text-muted">Progress</span>
                                         <span class="small fw-medium">65%</span>
                                     </div>
-                                    <div class="progress">
+                                    <div class="progress progress-custom">
                                         <div class="progress-bar" role="progressbar" style="width: 65%"></div>
                                     </div>
                                 </div>
-                                <a href="#" class="btn btn-primary w-100">Continue Learning</a>
+                                <button class="btn btn-custom btn-custom-primary w-100">Continue Learning</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Course Card 2 -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card course-card h-100">
+                        <div class="card card-custom h-100">
                             <img src="https://images.unsplash.com/photo-1503676260728-1c00da1a0c9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1022&q=80" 
                                  class="card-img-top" alt="Course Image">
                             <div class="card-body">
@@ -328,18 +415,18 @@
                                         <span class="small text-muted">Progress</span>
                                         <span class="small fw-medium">45%</span>
                                     </div>
-                                    <div class="progress">
+                                    <div class="progress progress-custom">
                                         <div class="progress-bar" role="progressbar" style="width: 45%"></div>
                                     </div>
                                 </div>
-                                <a href="#" class="btn btn-primary w-100">Continue Learning</a>
+                                <button class="btn btn-custom btn-custom-primary w-100">Continue Learning</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Course Card 3 -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card course-card h-100">
+                        <div class="card card-custom h-100">
                             <img src="https://images.unsplash.com/photo-1503676260728-1c00da1a0c9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1022&q=80" 
                                  class="card-img-top" alt="Course Image">
                             <div class="card-body">
@@ -350,11 +437,11 @@
                                         <span class="small text-muted">Progress</span>
                                         <span class="small fw-medium">80%</span>
                                     </div>
-                                    <div class="progress">
+                                    <div class="progress progress-custom">
                                         <div class="progress-bar" role="progressbar" style="width: 80%"></div>
                                     </div>
                                 </div>
-                                <a href="#" class="btn btn-primary w-100">Continue Learning</a>
+                                <button class="btn btn-custom btn-custom-primary w-100">Continue Learning</button>
                             </div>
                         </div>
                     </div>
@@ -365,9 +452,9 @@
             <div class="mb-5">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h3 class="h4 fw-bold mb-0">Upcoming Deadlines</h3>
-                    <a href="/assignments" class="text-primary text-decoration-none">View All</a>
+                    <a href="/assignments" class="btn btn-custom btn-custom-outline">View All</a>
                 </div>
-                <div class="card deadlines-card">
+                <div class="card card-custom">
                     <div class="table-responsive">
                         <table class="table table-hover mb-0">
                             <thead>
@@ -380,26 +467,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="interactive-card">
                                     <td class="fw-medium">Final Project Submission</td>
                                     <td>CS101</td>
                                     <td>May 15, 2024</td>
-                                    <td><span class="badge badge-urgent">Urgent</span></td>
-                                    <td><a href="#" class="action-link">Submit</a></td>
+                                    <td><span class="badge badge-custom bg-danger">Urgent</span></td>
+                                    <td><button class="btn btn-custom btn-custom-primary">Submit</button></td>
                                 </tr>
-                                <tr>
+                                <tr class="interactive-card">
                                     <td class="fw-medium">Midterm Exam</td>
                                     <td>MATH201</td>
                                     <td>May 20, 2024</td>
-                                    <td><span class="badge badge-pending">Due Soon</span></td>
-                                    <td><a href="#" class="action-link">Start</a></td>
+                                    <td><span class="badge badge-custom bg-warning">Due Soon</span></td>
+                                    <td><button class="btn btn-custom btn-custom-primary">Start</button></td>
                                 </tr>
-                                <tr>
+                                <tr class="interactive-card">
                                     <td class="fw-medium">Research Paper</td>
                                     <td>LIT301</td>
                                     <td>May 25, 2024</td>
-                                    <td><span class="badge badge-upcoming">Upcoming</span></td>
-                                    <td><a href="#" class="action-link">Review</a></td>
+                                    <td><span class="badge badge-custom bg-info">Upcoming</span></td>
+                                    <td><button class="btn btn-custom btn-custom-primary">Review</button></td>
                                 </tr>
                             </tbody>
                         </table>

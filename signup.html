@@ -1,0 +1,145 @@
+<div class="container">
+    <div class="auth-container">
+        <div class="auth-header">
+            <div class="auth-logo">Acadlyst</div>
+            <p class="auth-subtitle">Create your account</p>
+        </div>
+        
+        <form class="needs-validation" novalidate method="post" action="/api/users">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="invalid-feedback">Please enter your full name.</div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user-circle"></i></span>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Choose a username" required>
+                </div>
+                <div class="invalid-feedback">Please choose a username.</div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="password" class="form-control" id="password" name="password" 
+                           placeholder="Create a password" required 
+                           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="invalid-feedback">
+                    Password must be at least 8 characters and include uppercase, lowercase, number and special character.
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" 
+                           placeholder="Confirm your password" required>
+                </div>
+                <div class="invalid-feedback">Passwords do not match.</div>
+            </div>
+            
+            <div class="mb-4">
+                <label for="accessCode" class="form-label">Access Code</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    <input type="text" class="form-control" id="accessCode" name="accessCode" 
+                           placeholder="Enter your access code" required>
+                </div>
+                <div class="invalid-feedback">Please enter a valid access code.</div>
+                <div class="form-text text-muted">
+                    Your access code determines your role (provided by your institution)
+                </div>
+            </div>
+            
+            <!-- Hidden role field, will be set based on access code -->
+            <input type="hidden" id="role" name="role" value="">
+            
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="termsAgreed" name="termsAgreed" required>
+                <label class="form-check-label" for="termsAgreed">
+                    I agree to the <a href="/terms" target="_blank">Terms of Service</a> and <a href="/privacy" target="_blank">Privacy Policy</a>
+                </label>
+                <div class="invalid-feedback">You must agree to the terms before registering.</div>
+            </div>
+            
+            <div class="d-grid mb-4">
+                <button type="submit" class="btn btn-primary btn-lg">Create Account</button>
+            </div>
+            
+            <div class="text-center">
+                <p>Already have an account? <a href="/login" class="text-primary">Sign in</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Toggle password visibility
+    document.getElementById('togglePassword').addEventListener('click', function() {
+        const passwordInput = document.getElementById('password');
+        const icon = this.querySelector('i');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
+    });
+    
+    // Password match validation
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+    
+    function validatePasswordMatch() {
+        if (password.value !== confirmPassword.value) {
+            confirmPassword.setCustomValidity('Passwords do not match');
+        } else {
+            confirmPassword.setCustomValidity('');
+        }
+    }
+    
+    password.addEventListener('change', validatePasswordMatch);
+    confirmPassword.addEventListener('keyup', validatePasswordMatch);
+    
+    // Access code role determination
+    const accessCodeInput = document.getElementById('accessCode');
+    const roleInput = document.getElementById('role');
+    
+    accessCodeInput.addEventListener('input', function() {
+        const code = this.value.trim().toUpperCase();
+        
+        // Example logic: TEACH prefix for teachers, STUD prefix for students
+        if (code.startsWith('TEACH')) {
+            roleInput.value = 'teacher';
+        } else if (code.startsWith('STUD')) {
+            roleInput.value = 'student';
+        } else {
+            roleInput.value = '';
+        }
+    });
+</script>
